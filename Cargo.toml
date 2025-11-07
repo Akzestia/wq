@@ -1,6 +1,13 @@
 [package]
 name = "wq"
-version = "0.1.0"
+description = "CQL (Cassandra Query Language) preview tool for Zed"
+version = "1.0.0"
+authors = ["アクゼスティア <akzestia@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+keywords = ["cql", "preview", "syntax"]
+categories = ["text-editors", "command-line-utilities"]
+repository = "https://github.com/Akzestia/wq"
 edition = "2024"
 
 [dependencies]
