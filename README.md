@@ -13,3 +13,21 @@ A small tool that allows you to execute and preview CQL queries directly from Ze
 cargo install wq-zed
 ```
 
+### Keybindings
+
+Example keybinds for zed
+
+```json
+{
+    "context": "Editor && vim_mode == visual && !menu",
+    "bindings": {
+      "[ c": ["task::Spawn", { "task_name": "Execute query" }]
+    }
+}
+```
+> [!NOTE]
+> You don't need to create `Execute query` task, as it's provided by extension
+
+> [!IMPORTANT]
+> This tool uses the same env variables as [cqlls](https://github.com/Akzestia/cqlls). </br>
+> Please check the language server docs before using `WQ`
