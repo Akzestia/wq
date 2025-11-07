@@ -1,5 +1,5 @@
 [package]
-name = "wq"
+name = "wq-zed"
 description = "CQL (Cassandra Query Language) preview tool for Zed"
 version = "1.0.0"
 authors = ["アクゼスティア <akzestia@gmail.com>"]
