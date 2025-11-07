@@ -210,9 +210,12 @@ fn split_cql_statements(query: &str) -> Vec<String> {
 }
 
 async fn query_text(query: &str, preview_dir_path: &str) -> Result<(), Box<dyn Error>> {
-    let uri = std::env::var("SCYLLA_URI").unwrap_or_else(|_| "172.17.0.2:9042".to_string());
+    let uri = std::env::var("CQL_LSP_DB_URL").unwrap_or_else(|_| "127.0.0.1:9042".to_string());
+    let user = std::env::var("CQL_LSP_DB_USER").unwrap_or_else(|_| "cassandra".to_string());
+    let pswd = std::env::var("CQL_LSP_DB_PASSWD").unwrap_or_else(|_| "cassandra".to_string());
     let session: Session = SessionBuilder::new()
-        .known_node(uri)
+        .known_node(&uri)
+        .user(&user, &pswd)
         .connection_timeout(Duration::from_secs(3))
         .cluster_metadata_refresh_interval(Duration::from_secs(10))
         .build()
