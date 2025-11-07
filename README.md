@@ -26,8 +26,9 @@ Example keybinds for zed
 }
 ```
 > [!NOTE]
-> You don't need to create `Execute query` task, as it's provided by extension
+> You don't need to create `Execute query` task, as it's provided by [extension](https://github.com/Akzestia/zed-cql)
 
 > [!IMPORTANT]
 > This tool uses the same env variables as [cqlls](https://github.com/Akzestia/cqlls). </br>
 > Please check the language server docs before using `WQ`
+
